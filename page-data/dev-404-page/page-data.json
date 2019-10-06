@@ -1,1 +1,35 @@
-{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","webpackCompilationHash":"21b2d8b6f6464be55751","result":{"data":{"allSitePage":{"nodes":[{"path":"/404/"},{"path":"/404.html"},{"path":"/addons/"},{"path":"/ajax/"},{"path":"/accessibility/"},{"path":"/all-options/"},{"path":"/animations/"},{"path":"/customizing-tooltips/"},{"path":"/getting-started/"},{"path":"/faq/"},{"path":"/html-content/"},{"path":"/lifecycle-hooks/"},{"path":"/creating-tooltips/"},{"path":"/methods/"},{"path":"/misc/"},{"path":"/motivation/"},{"path":"/plugins/"},{"path":"/themes/"},{"path":"/tippy-instance/"},{"path":"/"},{"path":"/all-props/"}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+{
+  "componentChunkName": "component---cache-dev-404-page-js",
+  "path": "/dev-404-page/",
+  "webpackCompilationHash": "158ec30b021ac6c0b41d",
+  "result": {
+    "data": {
+      "allSitePage": {
+        "nodes": [
+          {"path": "/404/"},
+          {"path": "/404.html"},
+          {"path": "/accessibility/"},
+          {"path": "/addons/"},
+          {"path": "/ajax/"},
+          {"path": "/all-options/"},
+          {"path": "/animations/"},
+          {"path": "/customizing-tooltips/"},
+          {"path": "/creating-tooltips/"},
+          {"path": "/faq/"},
+          {"path": "/html-content/"},
+          {"path": "/methods/"},
+          {"path": "/lifecycle-hooks/"},
+          {"path": "/getting-started/"},
+          {"path": "/motivation/"},
+          {"path": "/misc/"},
+          {"path": "/themes/"},
+          {"path": "/plugins/"},
+          {"path": "/tippy-instance/"},
+          {"path": "/"},
+          {"path": "/all-props/"}
+        ]
+      }
+    },
+    "pageContext": {"isCreatedByStatefulCreatePages": true}
+  }
+}
