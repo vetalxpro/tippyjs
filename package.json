@@ -48,7 +48,8 @@
     "lint": "eslint . --ext .ts,.js",
     "format": "prettier --write \"**/*.{js,ts,json,md,mdx,scss,css}\"",
     "clean": "rimraf dist/ themes/ animations/ coverage/ .devserver/ .cache/ ./index.d.ts",
-    "prepare": "npm run clean && npm run build"
+    "prepare": "npm run clean && npm run build",
+    "publish": "npm publish --access public"
   },
   "browserslist": [
     "> 0.5%",
