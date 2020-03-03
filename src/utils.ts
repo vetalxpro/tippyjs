@@ -22,8 +22,8 @@ export function getValueAtIndexOrReturn<T>(
 }
 
 export function isType(value: any, type: string): boolean {
-  const str = {}.toString.call(value);
-  return str.indexOf('[object') === 0 && str.indexOf(`${type}]`) > -1;
+  const str = value ? value.toString() : {}.toString.call(value);
+  return str.indexOf('[object') > -1 && str.indexOf(`${type}]`) > -1;
 }
 
 export function invokeWithArgsOrReturn(value: any, args: any[]): any {
