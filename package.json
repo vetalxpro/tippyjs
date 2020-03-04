@@ -1,6 +1,6 @@
 {
   "name": "@synebo/lwc-tippy.js",
-  "version": "6.0.1",
+  "version": "6.0.6",
   "description": "Highly customizable tooltip and popover library",
   "main": "dist/tippy.umd.js",
   "module": "dist/tippy.esm.js",
@@ -17,13 +17,6 @@
   "bugs": "https://github.com/atomiks/tippyjs/issues",
   "homepage": "https://atomiks.github.io/tippyjs/",
   "keywords": [
-    "tooltip",
-    "popover",
-    "popper",
-    "dropdown",
-    "popup",
-    "tippy",
-    "tippy.js"
   ],
   "files": [
     "dist/",
@@ -49,7 +42,7 @@
     "format": "prettier --write \"**/*.{js,ts,json,md,mdx,scss,css}\"",
     "clean": "rimraf dist/ themes/ animations/ coverage/ .devserver/ .cache/ ./index.d.ts",
     "prepare": "npm run clean && npm run build",
-    "publish": "npm publish --access public"
+    "deploy": "npm publish --access public"
   },
   "browserslist": [
     "> 0.5%",
