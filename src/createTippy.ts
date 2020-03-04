@@ -21,7 +21,7 @@ import {
   Props,
   ReferenceElement,
 } from './types';
-import {ListenerObject, PopperTreeData, PopperChildren} from './types-internal';
+import {ListenerObject, PopperChildren, PopperTreeData} from './types-internal';
 import {
   arrayFrom,
   debounce,
@@ -284,13 +284,31 @@ export default function createTippy(
     );
   }
 
+  function isLwcComponent(element: Element): boolean {
+    return (
+      element &&
+      element.hasAttribute &&
+      element.hasAttribute('data-lwc-component')
+    );
+  }
+
   function onDocumentMouseDown(event: MouseEvent): void {
     // Clicked on interactive popper
-    if (
-      instance.props.interactive &&
-      popper.contains(event.target as Element)
-    ) {
-      return;
+    const target = event.target as Element;
+    if (instance.props.interactive) {
+      if (isLwcComponent(target)) {
+        const tippyInstanceId = parseInt(
+          target.getAttribute('data-tippy-instance-id') as string,
+          10,
+        );
+        if (tippyInstanceId === instance.id) {
+          return;
+        }
+      }
+
+      if (popper.contains(event.target as Element)) {
+        return;
+      }
     }
 
     // Clicked on the event listeners target
