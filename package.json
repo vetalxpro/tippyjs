@@ -1,6 +1,6 @@
 {
   "name": "@synebo/lwc-tippy.js",
-  "version": "6.0.6",
+  "version": "6.0.7",
   "description": "Highly customizable tooltip and popover library",
   "main": "dist/tippy.umd.js",
   "module": "dist/tippy.esm.js",
@@ -16,8 +16,7 @@
   "license": "MIT",
   "bugs": "https://github.com/atomiks/tippyjs/issues",
   "homepage": "https://atomiks.github.io/tippyjs/",
-  "keywords": [
-  ],
+  "keywords": [],
   "files": [
     "dist/",
     "animations/",

@@ -284,26 +284,12 @@ export default function createTippy(
     );
   }
 
-  function isLwcComponent(element: Element): boolean {
-    return (
-      element &&
-      element.hasAttribute &&
-      element.hasAttribute('data-lwc-component')
-    );
-  }
-
   function onDocumentMouseDown(event: MouseEvent): void {
     // Clicked on interactive popper
-    const target = event.target as Element;
+    const detail = event.detail as any;
     if (instance.props.interactive) {
-      if (isLwcComponent(target)) {
-        const tippyInstanceId = parseInt(
-          target.getAttribute('data-tippy-instance-id') as string,
-          10,
-        );
-        if (tippyInstanceId === instance.id) {
-          return;
-        }
+      if (detail && detail.tippyId === instance.id) {
+        return;
       }
 
       if (popper.contains(event.target as Element)) {
@@ -348,11 +334,11 @@ export default function createTippy(
   }
 
   function addDocumentMouseDownListener(): void {
-    doc.addEventListener('mousedown', onDocumentMouseDown, true);
+    doc.addEventListener('mousedown', onDocumentMouseDown, false);
   }
 
   function removeDocumentMouseDownListener(): void {
-    doc.removeEventListener('mousedown', onDocumentMouseDown, true);
+    doc.removeEventListener('mousedown', onDocumentMouseDown, false);
   }
 
   function onTransitionedOut(duration: number, callback: () => void): void {
